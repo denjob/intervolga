@@ -9,10 +9,11 @@ if(!file_exists($_path_mini)) {
 	list($width, $height) = getimagesize($_path_src);
 
 	$__cf = 1;
-	if($width > $height)
+	if($width > $height){
 		$__cf = $height/$width;
-	elseif($width < $height)
+	}elseif($width < $height){
 		$__cf = $width/$height;
+	}
 		
 	$new_w = 200;
 	$new_h = $new_w * $__cf;
